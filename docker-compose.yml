@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  pandoc:
+    image: pandoc/latex
+  cms:
+    image: wakamenod/cms
+    depends_on:
+      - pandoc
+    links:
+      - pandoc
