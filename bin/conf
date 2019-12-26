@@ -1,5 +1,5 @@
 contents="bashcms2_contents"
 contents_owner="wakamenod"
-wwwdir="/var/www"
+wwwdir="/usr/share/nginx/html"
 contentsdir="$wwwdir/$contents"
 appdir="$wwwdir/bashcms2"
