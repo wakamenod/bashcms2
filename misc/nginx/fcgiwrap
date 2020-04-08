@@ -1,0 +1,9 @@
+# FCGI_APP Variables
+FCGI_CHILDREN="1"
+# FCGI_SOCKET="/var/run/fcgiwrap.socket"
+FCGI_USER="nginx"
+FCGI_EXTRA_OPTIONS="-M 0700"
+OPTIONS="-u $FCGI_USER -g $FCGI_GROUP -s $FCGI_SOCKET -S $FCGI_EXTRA_OPTIONS - F 1 -P /var/run/spawn-fcgi.pid -- $FCGI_PROGRAM -f"
+# Socket owner/group (will default to FCGI_USER/FCGI_GROUP if not defined)
+FCGI_SOCKET_OWNER="nginx"
+FCGI_SOCKET_GROUP="nginx"

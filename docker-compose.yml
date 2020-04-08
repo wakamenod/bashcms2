@@ -1,11 +1,10 @@
-version: '2'
+version: '3'
 
 services:
-  pandoc:
-    image: pandoc/latex
+  pandoc-server:
+    image: idocking/go-pandoc:latest
+    command: ./go-pandoc run
   cms:
     image: wakamenod/cms
-    depends_on:
-      - pandoc
-    links:
-      - pandoc
+    ports:
+      - 9786:80
